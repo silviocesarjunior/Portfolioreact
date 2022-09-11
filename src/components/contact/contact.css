@@ -13,10 +13,20 @@
 .c-wrapper{
     padding: 50px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .c-flex{
     flex:1;
+}
+
+.f-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; 
+    padding: 2rem;
 }
 
 .c-right{
@@ -30,15 +40,16 @@
 
 .c-title{
     font-size: 60px;
-    width: 80%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .c-info-item{
-    display: flex;
     align-items: center;
-    margin: 50px 0px;
-    font-weight: 300;
-    width: 70%;
+    margin: 20px 0px;
+    font-weight: 500;
+    width: 100%;
 }
 
 .c-icon{

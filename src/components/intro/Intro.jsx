@@ -1,5 +1,5 @@
 import "./intro.css"
-import Me from "../../img/me2.png";
+import Me from "../../img/student.png";
 
 const Intro = () => {
     return (
@@ -10,16 +10,18 @@ const Intro = () => {
                     <h1 className="i-name">Silvio Cesar</h1>
                     <div className="i-title">
                         <div className="i-title-wrapper">
-                            <div className="i-title-item">Web Developer</div>
                             <div className="i-title-item">Javascript</div>
                             <div className="i-title-item">CSS</div>
                             <div className="i-title-item">React</div>
                             <div className="i-title-item">NodeJs</div>
                             <div className="i-title-item">Java</div>
+                            <div className="i-title-item">React native</div>
+                            <div className="i-title-item">Mongodb</div>
+                            <div className="i-title-item">Excel and VBA</div>
                         </div>
                     </div>
                     <p className="i-desc">
-                        I design and develop services for customers of all sizes, specializing in creating websites, web services and online stores.
+                    I develop services for clients of all sizes, creating websites, web services such as portfolio, mobile applications and excel dashboards.
                     </p>
                 </div>
                 <svg
@@ -80,7 +82,7 @@ const Intro = () => {
             </div>
             <div className="i-right">
                 <div className="i-bg"></div>
-                <img src={Me} className="i-img" />
+                <img className="i-img" src={Me} alt="" />
             </div>
         </div>
     )

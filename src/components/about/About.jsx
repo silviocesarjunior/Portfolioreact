@@ -20,14 +20,14 @@ const About = () => {
                     Silvio Cesar Junior
                 </p>
                 <p className="a-desc">
-                I am a professional with experience in computer and laptop maintenance, with some post-college projects as a front-end and back-end developer with Javascript, CSS, React and Java programming languages. 
+                I am a professional with experience in computer and laptop maintenance, with some post-college projects as a front-end and back-end developer with Javascript, React, React native, Bulma and Java programming languages. Styles with CSS. 
                 </p>
                 <div className="a-award">
                     <img src={Decolar} alt="" className="a-award-img" />
                     <div className="a-award-texts">
                         <h4 className="a-award-title">Time for takeoff</h4>
                         <p className="a-award-desc">
-                            2022 here I come
+                            2023 here I come
                         </p>
                     </div>
                 </div>

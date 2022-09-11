@@ -1,9 +1,9 @@
 .p{
     width: 30%;
-    height: 40vh;
+    height: 25vh;
     margin: 20px 10px;
-    border: 2px solid rgb(243, 242, 242);
-    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
     overflow: hidden;
 }
 
@@ -20,7 +20,7 @@
     height: 6px;
     border-radius: 50%;
     margin: 3px;
-    background-color: white;
+    background-color: black;
 }
 
 .p-img{
@@ -35,6 +35,6 @@
 @media screen and (max-width:480px){
     .p{
         width: 40%;
-        height: 20vh;
+        height: 10vh;
     }
 }
