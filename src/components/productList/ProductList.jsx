@@ -24,7 +24,7 @@ const ProductList = () => {
             </div>
             <div className="pl-list">
                 <Product img={Arquiteta} />
-                <a href="https://danielearquiteta.herokuapp.com/">
+                <a href="https://danielegalvani.netlify.app/">
                 <button>View site</button></a>
                 <Product img={Blog} />
                 <a href="https://silvio-blog.netlify.app/">
