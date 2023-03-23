@@ -1,7 +1,7 @@
-<h1 align="center"> Habits </h1>
+<h1 align="center"> Portfólio Silvio Cesar </h1>
 
 <p align="center">
-NLW é um evento gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
+Recebendo constantes atualizações de projetos desenvolvidos e publicados, afim de atrair recrutadores, devs e clientes em potencial. <br/>
 </p>
 
 <p align="center">
