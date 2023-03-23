@@ -1,60 +1,88 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React from "react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Github from "@iconscout/react-unicons/icons/uil-github";
+import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
 import "./contact.css";
-import { useContext } from "react";
-import { ThemeContext } from "../../context";
-
-import Github from '@iconscout/react-unicons/icons/uil-github';
-import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
 
 const Contact = () => {
-    const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-    const [done, setDone] = useState(false)
+  function sendEmail(e) {
+    e.preventDefault();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    if (name === "" || (email === "") | (message === "")) {
+      alert("please fill in all fields");
+      return;
+    }
 
-        emailjs.sendForm('service_fx3oz6s', 'template_gr2us4c', form.current, 'user_ZlR7Sby7m2n2A6rsE9rRd')
-            .then((result) => {
-                console.log(result.text);
-                setDone(true);
-            }, (error) => {
-                console.log(error.text);
-            });
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email,
     };
+    emailjs
+      .send(
+        "service_kb3vskm",
+        "template_17j4yrp",
+        templateParams,
+        "dXnl2Ho1Wixl32gU3"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent", response.status, response.text);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("Error: ", err);
+        }
+      );
+  }
+  return (
+    <section id="contact">
+      <h1 className="title">Contact</h1>
+      <div className="container">
+        <form className="form" onSubmit={sendEmail}>
+          <input
+            className="input"
+            type="text"
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
 
-    const theme = useContext(ThemeContext);
-    const darkMode = theme.state.darkMode;
-    return (
-        <div className="c">
-            <div className="c-bg"></div>
-            <div className="c-wrapper">
-                <div className="c-left">
-                    <h1 className="c-title">Let's discuss your project</h1>
-                    <div className="c-right">
-                        <p className="c-desc">
-                            <b>What's your story?</b> contact us. We can talk to you without obligation
-                        </p>
-                        <form ref={form} onSubmit={sendEmail}>
-                            <input style={{ backgroundColor: darkMode && "#333" }} type="text" name="user_name" placeholder="Name" />
-                            <input style={{ backgroundColor: darkMode && "#333" }} type="text" name="user_email" placeholder="Email" />
-                            <textarea style={{ backgroundColor: darkMode && "#333" }} rows="5" name="message" placeholder="Message" />
-                            <input type="submit" value="Enviar" />
-                            <br />
-                            <span>{done && "Obrigado pelo contato!"}</span>
-                        </form>
-                        <div className='f-icons'>
-                        <a href='https://github.com/silviocesarjunior'>
-                            <Github color='green' size='3rem' /></a>
-                        <a href='https://www.linkedin.com/in/silviocesarjunior/'>
-                            <Linkedin color='green' size='3rem' /></a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+          <input
+            className="input"
+            type="text"
+            placeholder="E-mail"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
 
-export default Contact
+          <textarea
+            className="textarea"
+            placeholder="Message..."
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+          />
+
+          <input className="button" type="submit" value="Send" />
+        </form>
+      </div>
+      <div className="icons_footer">
+      <a href="https://github.com/silviocesarjunior">
+        <Github color="#59b256" size="3rem" />
+      </a>
+      <a href="https://www.linkedin.com/in/silviocesarjunior/">
+        <Linkedin color="#59b256" size="3rem" />
+      </a>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

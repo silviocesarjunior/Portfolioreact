@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from "react";
 import "./productList.css";
 import Product from "../product/Product";
 import Arquiteta from "../../img/arquiteta.png";
@@ -12,57 +14,87 @@ import Quizz from "../../img/quiz.png";
 import Adivinha from "../../img/adivinha.png";
 import Calculadora from "../../img/calculadora.png";
 import Pedal from "../../img/app-bike.jpg";
+import Habits from "../../img/habits.png";
+import Finance from "../../img/finance.png";
 
 const ProductList = () => {
-    return (
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  return (
+    <>
+      <section id="portfolio">
         <div className="pl">
-            <div className="pl-texts">
-                <h1 className="pl-title">Create & inspire</h1>
-                <p className="pl-desc">
-                    It is a creative portfolio for your company, shows architectural work, stunning portfolio styles for your tastes.
-                </p>
-            </div>
-            <div className="pl-list">
-                <Product img={Arquiteta} />
-                <a href="https://danielegalvani.netlify.app/">
-                <button>View site</button></a>
-                <Product img={Blog} />
-                <a href="https://silvio-blog.netlify.app/">
-                <button>View site</button></a>
-                <Product img={Site} />
-                <a href="https://portfoliodaniele.netlify.app/">
-                <button>View site</button></a>
-                <Product img={Site1} />
-                <a href="https://portfoliodaniele.netlify.app/">
-                <button>View site</button></a>
-                <Product img={NR} />
-                <a href="https://nrtreinamentos.netlify.app/">
-                <button>View site</button></a>
-                <Product img={Quizz} />
-                <a href="https://testquizz.netlify.app/">
-                <button>View site</button></a>
-                <Product img={Bootcamp} />
-                <a href="https://github.com/silviocesarjunior/Aula1_gameplay">
-                <button>Source code</button></a>
-                <Product img={Bankline1} />
-                <a href="https://github.com/silviocesarjunior/bankline-app">
-                <button>Source code</button></a>
-                <Product img={Bankline2} />
-                <a href="https://github.com/silviocesarjunior/bankline-api">
-                <button>Source code</button></a>
-                <Product img={Adivinha} />
-                <a href="https://github.com/silviocesarjunior/Jogo_adivinha/blob/main/gerador_numeros">
-                <button>Source code</button></a>
-                <Product img={Calculadora} />
-                <a href="https://github.com/silviocesarjunior/Calculator">
-                <button>Source code</button></a>
-                <Product img={Pedal} />
-                <a href="https://github.com/silviocesarjunior/bike">
-                <button>Source code</button></a>
-                
-            </div>
+          <div className="pl-texts">
+            <h1 className="pl-title">Create & inspire</h1>
+            <p className="pl-desc">
+              It is a creative portfolio for your company, shows architectural
+              work, stunning portfolio styles for your tastes.
+            </p>
+          </div>
+          <div className="pl-list">
+            <Product img={Arquiteta} />
+
+            <a href="https://danielegalvani.netlify.app/">
+              <button>View site</button>
+            </a>
+            {/*<button onClick={() => setIsModalVisible(true)}>Ver mais</button>
+            {isModalVisible ? <Modal>Portfolio daniele</Modal> : null}*/}
+            <Product img={Blog} />
+            <a href="https://silvio-blog.netlify.app/">
+              <button>View site</button>
+            </a>
+            <Product img={Site} />
+            <a href="https://portfoliodaniele.netlify.app/">
+              <button>View site</button>
+            </a>
+            <Product img={Site1} />
+            <a href="https://portfoliodaniele.netlify.app/">
+              <button>View site</button>
+            </a>
+            <Product img={NR} />
+            <a href="https://nrtreinamentos.netlify.app/">
+              <button>View site</button>
+            </a>
+            <Product img={Quizz} />
+            <a href="https://testquizz.netlify.app/">
+              <button>View site</button>
+            </a>
+            <Product img={Habits} />
+            <a href="https://silviocesarjunior.github.io/nlw-setup/">
+              <button>View site</button>
+            </a>
+            <Product img={Finance} />
+            <a href="#">
+              <button>Source code</button>
+            </a>
+            <Product img={Bootcamp} />
+            <a href="https://github.com/silviocesarjunior/Aula1_gameplay">
+              <button>Source code</button>
+            </a>
+            <Product img={Bankline1} />
+            <a href="https://github.com/silviocesarjunior/bankline-app">
+              <button>Source code</button>
+            </a>
+            <Product img={Bankline2} />
+            <a href="https://github.com/silviocesarjunior/bankline-api">
+              <button>Source code</button>
+            </a>
+            <Product img={Adivinha} />
+            <a href="https://github.com/silviocesarjunior/Jogo_adivinha/blob/main/gerador_numeros">
+              <button>Source code</button>
+            </a>
+            <Product img={Calculadora} />
+            <a href="https://github.com/silviocesarjunior/Calculator">
+              <button>Source code</button>
+            </a>
+            <Product img={Pedal} />
+            <a href="https://github.com/silviocesarjunior/bike">
+              <button>Source code</button>
+            </a>
+          </div>
         </div>
-    );
+      </section>
+    </>
+  );
 };
 
 export default ProductList;

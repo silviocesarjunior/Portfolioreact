@@ -1,0 +1,60 @@
+.f {
+    height: 95vh;
+}
+.skills {
+    background: #000000;
+    color: #ffffff;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #000000;
+    color: #ffffff;
+}
+
+h2 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.element {
+    width: 100px;
+    height: 100px;
+    scale: 0.3;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40rem;
+    gap: 4rem;
+}
+
+.element div {
+    font-size: 5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 480px){
+    .f{
+        height: 65vh;
+    }
+    h2 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .element {
+        scale: 0.23;
+    }
+    .element div {
+        font-size: 4rem;
+    }
+}
